@@ -2,46 +2,59 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>形狀重疊練習</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4-3 作業：形狀重疊</title>
     <style>
-
-        .container {
+        /* 建立一個容器，確保形狀不會亂跑 */
+        .canvas-area {
             position: relative;
-            width: 500px;
-            height: 300px;
-            margin: 50px;
+            width: 600px;
+            height: 400px;
+            margin: 50px auto; /* 讓整個畫布在頁面居中 */
         }
 
-
-        .rectangle {
+        /* 藍色矩形 */
+        .rect {
             position: absolute;
-            width: 200px;
-            height: 150px;
-            background-color: blue; 
-            border: 5px solid black; 
-            top: 20px;
-            left: 20px;
-            z-index: 1; 
+            width: 250px;
+            height: 180px;
+            background-color: blue;
+            border: 5px solid black;
+            top: 50px;
+            left: 50px;
+            z-index: 1; /* 在下層 */
         }
 
-
+        /* 黃色圓形 */
         .circle {
             position: absolute;
-            width: 150px;
-            height: 150px;
-            background-color: yellow; 
-            border: 5px solid red;   
-            border-radius: 50%;      
-            top: 50px;
-            left: 130px;            
-            z-index: 2;              
+            width: 180px;  /* 寬高相等才是正圓 */
+            height: 180px;
+            background-color: yellow;
+            border: 5px solid red;
+            border-radius: 50%; /* 變成圓形 */
+            
+            /* 調整位置：將 top 設為與矩形相同的 50px，圓形就會往上提 */
+            top: 50px; 
+            left: 180px; 
+            
+            z-index: 2; /* 在上層 */
+        }
+
+        /* 頁面標題樣式（選用） */
+        h2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="rectangle"></div>
+    <h2>Chang-ching fu (113403051) - 形狀重疊練習</h2>
+
+    <div class="canvas-area">
+        <div class="rect"></div>
         <div class="circle"></div>
     </div>
 
