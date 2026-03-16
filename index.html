@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>形狀重疊練習</title>
+    <style>
+
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            margin: 50px;
+        }
+
+
+        .rectangle {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            background-color: blue; 
+            border: 5px solid black; 
+            top: 20px;
+            left: 20px;
+            z-index: 1; 
+        }
+
+
+        .circle {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: yellow; 
+            border: 5px solid red;   
+            border-radius: 50%;      
+            top: 50px;
+            left: 130px;            
+            z-index: 2;              
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="rectangle"></div>
+        <div class="circle"></div>
+    </div>
+
+</body>
+</html>
