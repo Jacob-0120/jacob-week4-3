@@ -1,62 +1,40 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 4-3 作業：形狀重疊</title>
+    <title>Overlapping Shapes Task</title>
     <style>
-        /* 建立一個容器，確保形狀不會亂跑 */
-        .canvas-area {
-            position: relative;
-            width: 600px;
-            height: 400px;
-            margin: 50px auto; /* 讓整個畫布在頁面居中 */
+        /* 讓畫布居中，方便觀察 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
-
-        /* 藍色矩形 */
-        .rect {
-            position: absolute;
-            width: 250px;
-            height: 180px;
-            background-color: blue;
-            border: 5px solid black;
-            top: 50px;
-            left: 50px;
-            z-index: 1; /* 在下層 */
-        }
-
-        /* 黃色圓形 */
-        .circle {
-            position: absolute;
-            width: 180px;  /* 寬高相等才是正圓 */
-            height: 180px;
-            background-color: yellow;
-            border: 5px solid red;
-            border-radius: 50%; /* 變成圓形 */
-            
-            /* 調整位置：將 top 設為與矩形相同的 50px，圓形就會往上提 */
-            top: 50px; 
-            left: 180px; 
-            
-            z-index: 2; /* 在上層 */
-        }
-
-        /* 頁面標題樣式（選用） */
-        h2 {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            color: #333;
+        svg {
+            background-color: white;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
 <body>
 
-    <h2>Chang-ching fu (113403051) - 形狀重疊練習</h2>
+    <svg width="400" height="300">
+        
+        <rect x="50" y="50" width="180" height="150" 
+              fill="blue" 
+              stroke="black" 
+              stroke-width="5" />
 
-    <div class="canvas-area">
-        <div class="rect"></div>
-        <div class="circle"></div>
-    </div>
+        <circle cx="230" cy="130" r="70" 
+                fill="yellow" 
+                stroke="red" 
+                stroke-width="5" />
+
+    </svg>
 
 </body>
 </html>
